@@ -1,0 +1,2 @@
+command to something	command to act(79.8%)|artifact(12.9%)
+assistant at something	assistant at location(39.7%)|artifact(39.4%)

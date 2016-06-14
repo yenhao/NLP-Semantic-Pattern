@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Search Possible Pattern</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+        <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}"> -->
+    </head>
+    <body style="font-family:微軟正黑體">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Search Possible Pattern</h1>
+                <p><I>Have you ever suffer that you are eager to finish your thesis or some article, you tried to come up with every words you know, but even you know the word, did you really know how to use the word?</I></p>
+
+                <br/>             
+            </div>
+            
+            <form action="{{ url_for('search_entry') }}" method=post>
+                <div class="row">
+                <h3>Try this</h3>
+                </div>
+                <div class="form-group">
+                    <br/>
+                    <label>Words</label>
+                    <div class = "row">
+                        <div class = "col-lg-11">
+                            <input type="text" class="form-control" name="Inputword" id="Inputword" placeholder="Give me some words" value="{{inputquery}}" >
+                        </div>
+                        <div class = "col-lg-1">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <br/>
+                    <label>Dataset</label>
+                    <br/>
+                    <div class="row" style="text-align:center">
+                        <div class="col-md-6">
+                            <label class="radio-inline">
+                              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" checked> WriteAHead
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="radio-inline">
+                              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="0"> Linggle
+                            </label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div style="text-align:right;">
+                        
+                    </div>
+                </div>
+                        
+            </form>
+            {% block body %}{% endblock %}
+        </div>
+        <div class="footer" style="text-align:center;vertical-align: middle ;">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-1">
+                   <img src="{{ url_for('static', filename='IMG_1.jpg') }}" alt="104065502 Eric" class="img-circle" height="50px">
+                </div>
+                <div class="col-md-2">
+                    <p style="font-size:16px"><i>Eric & Jamie &copy; Idea Lab, NTHU</i></p>
+                </div>
+                <div class="col-md-1">
+                    <img src="{{ url_for('static', filename='IMG_2.jpg') }}" alt="104065510 Jamie" class="img-circle" height="50px">
+                </div>
+                <div class="col-md-4">
+                </div>            
+            </div>
+        </div>        
+    </body>
+</html>
