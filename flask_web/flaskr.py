@@ -74,7 +74,7 @@ def search_entry():
 if __name__ == '__main__':
 
     linggle_dict = defaultdict(lambda: None)
-    linggle_data_prefix = '../linggle_sen_result/reducer-0'
+    linggle_data_prefix = '../linggle/linggle_sen_result/reducer-0'
 
     for i in range(8):
         with open(linggle_data_prefix + str(i)) as linggle:
@@ -86,7 +86,7 @@ if __name__ == '__main__':
     print 'linggle_dict has built!'
 
     writeAhead_dictionary = defaultdict(lambda: 0) 
-    writeahead_data_prefix = '../writeahead_result/reducer-0'
+    writeahead_data_prefix = '../writeahead/writeahead_result/reducer-0'
     #read json file
     for i in range(8):
         with open(writeahead_data_prefix + str(i)) as json_file:
