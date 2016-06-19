@@ -1,8 +1,8 @@
 # NLP-Semantic-Pattern
 
-The propose of this work is to get the possible pattern for normal English using by analyzing a bunch of sentence.
-For example, 
-previous we can only get experience in something
+<p>The propose of this work is to get the possible pattern for normal English using by analyzing a bunch of sentence.</p>
+
+For example,previous we can only get experience in something.
 Currently, we can get experience in act (44.3%)|artifical (15.8%) 
 
 We are trying to make the phrase/ grammer more precise. We will talk about the process in below chapter.
@@ -13,7 +13,9 @@ Generate the new pattern with possibility!
 
 1.Go to writeahead folder.
 
-2.Run 'cat citeseerx.difficulty.txt (or citeseerx) | python re.pat.map.py | sort | python re.pat.generate.py' to generate the new pattern with possibility.
+2.Run the code below:
+'''cat citeseerx.difficulty.txt (or citeseerx) | python re.pat.map.py | sort | python re.pat.generate.py' ''' 
+to generate the new pattern with possibility.
 
 In re.pat.maper.py, it convert the original sentence into format: headword:postag<tab>pattern<tab>collocation<tab>sentence .
 
