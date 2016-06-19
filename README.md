@@ -13,15 +13,18 @@ Generate the new pattern with possibility!
 
 1.Go to writeahead folder.
 
-2.Run the code below:
-```cat citeseerx.difficulty.txt (or citeseerx) | python re.pat.map.py | sort | python re.pat.generate.py' ``` 
+2.Run the code below: <br/>
+```cat citeseerx.difficulty.txt (or citeseerx) | python re.pat.map.py | sort | python re.pat.generate.py' ``` <br/> 
 to generate the new pattern with possibility.
 
-In re.pat.maper.py, it convert the original sentence into format: headword:postag<tab>pattern<tab>collocation<tab>sentence .
+In re.pat.maper.py, it convert the original sentence into format: <br/>
+```headword:postag <tab> pattern <tab> collocation <tab> sentence```
 
 In re.pat.generate.py, it disambiguate the word and get the possible category for each pattern. Then reassemble it into  a new pattern.
 
-3.Run 'cat citeseerx.difficulty.txt (or citeseerx) | ../lmr 8m 8 'python re.pat.map.py' 'python re.pat.filter.py | python re.pat.reduce.py' writeahead_result' to get the corresponding sentence to combine them to be our result.
+3.Run <br/>
+```cat citeseerx.difficulty.txt (or citeseerx) | ../lmr 8m 8 'python re.pat.map.py' 'python re.pat.filter.py | python re.pat.reduce.py' writeahead_result'```<br/> 
+to get the corresponding sentence to combine them to be our result.
 
 
 It can make a little modify to become map reduce structure, but I was lazy, lol.
@@ -32,11 +35,15 @@ Because linggle have larger scale data than writeahead, we believe that if we ut
 
 1.Go to linggle folder.
 
-2.Run 'cat linggle_pattern.txt | ../lmr 8m 8 'python linggle.pat.map.py' 'python linggle.pat.reduce.py' linggle_result' to get the format: pattern <tab> new_pattern.
+2.Run <br/>
+```cat linggle_pattern.txt | ../lmr 8m 8 'python linggle.pat.map.py' 'python linggle.pat.reduce.py' linggle_result'```<br/> 
+to get the format: ``` pattern <tab> new_pattern```
 
 linggle_pattern is using the pattern (ex: experience in something) of writeAhead to query the linggle, then get the colls for each pattern.
 
-3.Run 'cat citeseerx | ../lmr 8m 8 'python ../writeahead/re.pat.map.py' 'python linggle_sen_generate.py' linngle_sen_result' to get the corresponding sentence to combine them to be our result.
+3.Run <br/>
+```cat citeseerx | ../lmr 8m 8 'python ../writeahead/re.pat.map.py' 'python linggle_sen_generate.py' linngle_sen_result'```<br/> 
+to get the corresponding sentence to combine them to be our result.
 
 
 
